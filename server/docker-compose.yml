@@ -1,0 +1,14 @@
+services:
+  ingestor:
+    build: .
+    container_name: activity-recorder-ingestor
+    ports:
+      - "4000:4000"          # host:container
+    environment:
+      - PORT=4000
+      - LOG_PATH=/var/log/browser-recorder/events.log
+      - MAX_PAYLOAD_BYTES=1048576
+    volumes:
+      - ./data:/var/log/browser-recorder
+    restart: unless-stopped
+    # platform: linux/arm64   # Uncomment on Apple Silicon only if you hit arch issues
