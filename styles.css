@@ -1,0 +1,7 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.container { padding: 12px; width: 320px; }
+.row { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+.row input[type="text"], .row input[type="number"] { flex: 1; padding: 6px 8px; border-radius: 8px; border: 1px solid #ddd; }
+.actions { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+button { padding: 8px 12px; border: 0; background: #111; color: #fff; border-radius: 10px; cursor: pointer; }
+.muted { color: #6b7280; font-size: 12px; }

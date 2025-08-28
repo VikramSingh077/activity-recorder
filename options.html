@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Recorder Options</title>
+</head>
+<body>
+<div class="container">
+    <h1>Recorder Options</h1>
+
+
+    <label class="row">
+        <input type="checkbox" id="captureClicks" /> Capture clicks
+    </label>
+
+
+    <label class="row">
+        <input type="checkbox" id="captureKeystrokes" /> Capture keystrokes (privacy-sensitive)
+    </label>
+
+
+    <label class="row">
+        Server URL
+        <input type="text" id="serverUrl" placeholder="http://localhost:4000" />
+    </label>
+
+
+    <label class="row">
+        Batch size
+        <input type="number" id="batchSize" min="1" max="200" />
+    </label>
+
+
+    <label class="row">
+        Flush interval (ms)
+        <input type="number" id="flushIntervalMs" min="500" max="60000" step="100" />
+    </label>
+
+
+    <div class="actions">
+        <button id="save">Save</button>
+        <span id="status" class="muted"></span>
+    </div>
+</div>
+<script src="options.js"></script>
+</body>
+</html>
